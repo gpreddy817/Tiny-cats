@@ -1,15 +1,16 @@
-import { Document } from "mongoose";
+import type { Document } from "mongoose";
 
+export interface ICat extends Document {
+  name: string;
+  breed: string;
+  description: string;
+  kidsFriendly: boolean;
+  apartmentFriendly: boolean;
+  lifeSpan: number;
+  energyLevel: string;
+  image: string;
+  color: string;
 
-export default interface ICat extends Document{
-    name: string;
-    lifespan: number;
-    breed: string;
-    description: string;
-    kidsfriendly: boolean;
-    appartmentfriendly:boolean;
-    energylevel:string;
-    image:string;
-    color:string;
-
+  createdAt?: Date;
+  updatedAt?: Date;
 }
