@@ -1,7 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
 import app from "./app.ts";
+import { connectDb } from "./config/db.ts";
 
-app.listen(3000, ()=>{
-    console.log("Server is running on port 3000")
-})
+connectDb();
 
-export default app 
+let port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});
