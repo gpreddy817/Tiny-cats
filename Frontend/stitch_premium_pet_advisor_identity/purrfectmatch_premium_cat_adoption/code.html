@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PurrfectMatch | Premium Cat Adoption &amp; Expert Care</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fff8f6",
+                    "tertiary-container": "#779b7f",
+                    "on-secondary-fixed-variant": "#6f3800",
+                    "on-primary-container": "#590f00",
+                    "tertiary-fixed": "#c5eccc",
+                    "secondary-fixed-dim": "#ffb780",
+                    "on-primary-fixed": "#3c0700",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#3a2e2b",
+                    "on-tertiary-fixed-variant": "#2c4e36",
+                    "inverse-on-surface": "#ffede9",
+                    "on-tertiary-container": "#0f321d",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#241916",
+                    "surface-container": "#ffe9e4",
+                    "primary": "#a33d23",
+                    "primary-container": "#e76f51",
+                    "inverse-primary": "#ffb4a2",
+                    "surface-container-highest": "#f3ded9",
+                    "on-tertiary-fixed": "#00210e",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#f3ded9",
+                    "on-secondary-fixed": "#2f1400",
+                    "on-surface-variant": "#57423d",
+                    "tertiary": "#43664d",
+                    "tertiary-fixed-dim": "#aad0b1",
+                    "on-secondary-container": "#783d01",
+                    "on-primary-fixed-variant": "#83260e",
+                    "surface-container-high": "#f9e4df",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#ffdad2",
+                    "surface-dim": "#ead6d1",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fff8f6",
+                    "primary-fixed-dim": "#ffb4a2",
+                    "secondary-container": "#ffab69",
+                    "outline": "#8a716c",
+                    "surface-container-low": "#fff1ed",
+                    "secondary": "#8e4e14",
+                    "surface": "#fff8f6",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#dec0b9",
+                    "secondary-fixed": "#ffdcc4",
+                    "surface-tint": "#a33d23",
+                    "on-background": "#241916"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "md": "16px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "gutter": "24px",
+                    "xxl": "48px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Sora"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Sora"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Sora"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Sora"],
+                    "display-lg": ["Sora"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(231, 111, 81, 0.04);
+        }
+        .btn-press:active {
+            transform: scale(0.98);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-container-max mx-auto bg-white/70 backdrop-blur-md border-b border-white/50 shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="pets">pets</span>
+<span class="font-display-lg text-headline-md-mobile text-primary tracking-tight md:text-headline-md">PurrfectMatch</span>
+</div>
+<nav class="hidden md:flex items-center gap-xl">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Breed Advisor</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Adoptions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Care Portal</a>
+</nav>
+<div class="flex items-center gap-md">
+<div class="hidden sm:flex items-center gap-sm">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="favorite">favorite</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-xl font-semibold btn-press transition-all hover:bg-primary/90">Sign In</button>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="pt-[88px]">
+<section class="relative min-h-[870px] flex items-center overflow-hidden px-margin-mobile md:px-xxl py-xxl">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-xxl items-center">
+<div class="z-10 space-y-lg text-center md:text-left">
+<div class="inline-flex items-center gap-2 bg-primary-container/10 px-4 py-2 rounded-full border border-primary-container/20">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-primary font-label-md text-label-md">AI-Powered Breed Matching</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                        Find Your <span class="text-primary">Purrfect</span> Companion.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto md:mx-0">
+                        Expert guidance and premium adoption services for the modern cat parent. Our Invisible Expert AI helps you discover the ideal feline friend for your home and lifestyle.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center md:justify-start">
+<button class="bg-primary-container text-on-primary-container px-xxl py-md rounded-[16px] font-bold text-lg shadow-lg btn-press transition-all hover:scale-[1.02]">
+                            Start Matching
+                        </button>
+<button class="bg-white border-2 border-primary-container/30 text-primary px-xxl py-md rounded-[16px] font-bold text-lg btn-press transition-all hover:bg-surface-container-low">
+                            View Adoptions
+                        </button>
+</div>
+</div>
+<div class="relative w-full h-[400px] md:h-[600px] rounded-[32px] overflow-hidden shadow-2xl rotate-1">
+<img alt="Happy cat in modern home" class="w-full h-full object-cover" data-alt="A warm and beautifully lit photograph of a ginger Maine Coon cat lounging gracefully on a soft velvet emerald green sofa in a sun-drenched, high-end modern living room. The room features minimalist decor with soft cream walls and large windows casting gentle, golden-hour sunlight across the scene. The mood is peaceful and luxurious, emphasizing comfort and the deep emotional bond between a pet and a beautiful home environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvMkAsFa8Z2lH6q5N_-YI5tK6w_GBam7gMqPmsQyV8N5vHEqy_zAbcVRl4BMOPXAbjpYUYVNmkZGejPYiheCCS2I93jYba0Ij-DeLPmK7DID7sp-yBVGGEs8NFwWPf1vgjTfjy2WYKIgp9k1DzHebCx6_81esR3OkTYIKTEd0L2r43_CeFW7p6fk_qUPK_vURjZMSIV0g3KNUEKINADLNOMmcNmGFm67Imf13WepPeFuMCCnwbCUJSnh4Se2ZpytMrXJkiaEjDLghX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-lg bg-white/70 backdrop-blur-md rounded-[24px] border border-white/50">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Pet Parent" data-alt="Close up portrait of a smiling young professional woman with a soft, friendly expression, set against a blurred background of a modern apartment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgoY4B_-7E3Q3MGllrrudQ6be46Socj42HAwXB3zsdP2ciuCh_bk_poL1lO8F1d9WDSFbLQKO0QZFbXyMsv955fX-x8Cjh4LVfQmRfHqJ4YKguoULU34ixP69XrRafowqK-BY3ZEs5MNP4bdp6jb28i7ujIRpHQaYIGDdpHNK1unxjcc0IOZS5hO6QeRhMUWwrsEOCVYPF7Icv-qmoQIUolb8RSAA7jiwixXz_TjTNrDKNU-t_KcAQvsGWirjYv6QngNaFinQtgE8W"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">"Met my soulmate, Leo."</p>
+<p class="text-label-md text-on-surface-variant">Matched with Bengal Mix</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary-container/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent -z-10"></div>
+</section>
+<!-- How It Works Section -->
+<section class="py-xxl px-margin-mobile max-w-container-max mx-auto">
+<div class="text-center mb-xxl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Our Seamless Process</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">Taking the guesswork out of adoption with our three-step concierge service.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<!-- Step 1 -->
+<div class="bg-white p-xl rounded-[24px] ambient-shadow border border-surface-container-high hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">AI Assessment</h3>
+<p class="text-on-surface-variant">Our "Invisible Expert" analyzes your living space, activity levels, and preferences to find your ideal breed profile.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white p-xl rounded-[24px] ambient-shadow border border-surface-container-high hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 bg-tertiary-container/10 rounded-2xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Vetted Matches</h3>
+<p class="text-on-surface-variant">We partner with premium, ethical registries and shelters to curate a list of verified cats that fit your profile.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white p-xl rounded-[24px] ambient-shadow border border-surface-container-high hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 bg-on-secondary-fixed/10 rounded-2xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="card_giftcard">card_giftcard</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Concierge Arrival</h3>
+<p class="text-on-surface-variant">From paperwork to first-week care kits, we handle the logistics so you can focus on bonding with your new friend.</p>
+</div>
+</div>
+</section>
+<!-- Featured Breeds Section (Bento Grid) -->
+<section class="bg-surface-container-low py-xxl px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xxl gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Discover Featured Breeds</h2>
+<p class="text-body-lg text-on-surface-variant max-w-xl">Explore unique personalities and traits curated by our experts.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                        Browse Registry <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-md h-auto md:h-[600px]">
+<!-- Large Card -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-[32px] overflow-hidden group">
+<img alt="British Shorthair" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A portrait of a majestic lilac British Shorthair cat sitting regally on a soft grey textured carpet. The lighting is soft and diffused, creating a professional editorial aesthetic typical of high-end lifestyle magazines. The background is a clean, neutral interior with minimal wooden furniture, bathed in a bright, clean white-and-warm-beige color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuElE3NueSE_LcMrN2JUOUMeovNz7EWD6IuIMII4KoB-OAf1DcJwjSEgCvbV7l0ad6p3IgJK79pGuL329WdGXd7HEicGAwFLVwhGVJwOry7_cuBX0cOcA6nhDKISvsmuryAdT_3J-K-wldaX_d8ZB21waDUMuaJMa9mOYSXXyHYF_CynSu6xUr1xHoKGXtUoDu-kQsnZ96CCMqSOca9BSsqCiyw8dzFqSZYqltAj22KXenu6Z_kNUT9vaZeCUvfW1pGiXE2Alc0hhq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-xl text-white">
+<span class="bg-primary/90 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Popular Choice</span>
+<h3 class="text-3xl font-bold mb-2">British Shorthair</h3>
+<p class="text-white/80 max-w-xs">Calm, affectionate, and low-maintenance companions.</p>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="md:col-span-2 relative rounded-[32px] overflow-hidden group h-[250px] md:h-auto">
+<img alt="Bengal Cat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dynamic shot of a leopard-spotted Bengal cat playfully jumping towards a feather wand. The setting is a bright, modern penthouse with floor-to-ceiling windows and light oak flooring. The aesthetic is clean, energetic, and high-key, using a palette of warm woods, soft whites, and the vibrant wild pattern of the cat's fur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoXHHxwOePGf-ZyUqK2cHSaoNr910yTTr6jXPjxV1SMK1IH4ZDKRIO8LXdLAzJSoDjIHWLUviuumJb_TImun3_SUEZ6vmhE3V2276mQ8JzMiqiCtzQ2PbbnTH8DS8Q5WWtvTdd7GC70D4ZZhV8_G_Qa8d_yihdOIKwpsNp6fcl5VBkvagIqhHL1hTBVYhda8Ba5Sqr9_zpvCvZtXbKznky9MaOncV3h2YL1ndoJqMX4Nb5KjX0ZZVVRl2UMR2LMj_ANOoNOoeR6LWq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg text-white">
+<span class="bg-tertiary/90 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">Active</span>
+<h4 class="text-2xl font-bold">Bengal Cat</h4>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="relative rounded-[32px] overflow-hidden group h-[250px] md:h-auto">
+<img alt="Ragdoll" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up of a blue-eyed Ragdoll cat being gently held by its owner, highlighting the soft, silky white fur. The scene is intimate and cozy, set in a light-filled bedroom with linen sheets. The lighting is extremely soft, capturing a dream-like, minimalist aesthetic focused on the theme of companionship and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMk7doKbCQUOtwQovMLq9cPiydHP16KFu6V83DL5HtyR7ykGRAOtmge9-i8RIwbY4oZWq1pb8M8wNMruktpYW4Ne-LNjYtbGKlREhR6rpYDaw86VTtDxygzAfCFTRIdLIo7NP0ZZuM7kvLcAmO0axx2VZaxo8FqhjOY10LictXhgo825--8usvW4rJf2tMrHQ9yTzMm_sfWrcVDR-wwZMCNAvcw_33cnxNRYbAGkumBm8tbOgMaRo3WXClTDqBvHeSHf-1k8eKAHTe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg text-white">
+<h4 class="text-xl font-bold">Ragdoll</h4>
+</div>
+</div>
+<!-- Small Card 3 -->
+<div class="relative rounded-[32px] overflow-hidden group h-[250px] md:h-auto">
+<img alt="Russian Blue" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An elegant Russian Blue cat with deep emerald eyes perched on a contemporary marble countertop. The kitchen background is minimalist and high-end, featuring sleek cabinets and warm ambient lighting. The color palette is dominated by cool greys, silver, and crisp whites, creating a sophisticated and expert feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH1ykU0qQVi52STKL4-U2kJ3BczwEL5n3Bu7Bu7ZuHzk3v-hvNRByIkpzdWIBAAMqXvQI-yVula0W8_sDUy0841RDyI86tfqTzUcq2rwV14GXj5Ttng6nhLbDwyGCUH-BFrHguMgti4E9ogyGOH3GbJO06hWaPEmBtPzlTw_udgZFY04dXTPucC184t3n7BXY3tNfOvrTRs1tbGU9wBp1aBQEcFhn_BLbje5xxS4OB1kp0C0mpscTMgezFH0r-Hmk59Un4_DR5yJ0e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg text-white">
+<h4 class="text-xl font-bold">Russian Blue</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories Section -->
+<section class="py-xxl px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-xxl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Modern Happy Endings</h2>
+<p class="text-body-lg text-on-surface-variant">Real stories from our community of premium pet parents.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="bg-white p-xxl rounded-[32px] ambient-shadow border border-surface-container-high flex flex-col md:flex-row gap-lg items-center">
+<div class="w-full md:w-1/2 aspect-square rounded-[24px] overflow-hidden">
+<img alt="Success Story 1" class="w-full h-full object-cover" data-alt="A lifestyle photo of a man working from a minimalist home office with a sleek black cat sitting comfortably on his desk next to a laptop. The room is modern, bright, and airy with plants in the background. The atmosphere conveys a perfect balance of professional life and pet companionship, using a bright and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnbdgslHwseKZ9816eJykHVUMQwzzZGacpewEFM19aBCCFst3P5F4raGILGHqG3Gd6QbDQDOjXFj03DwXGKIraupK83KlxTs6E33nZm-iPVKuUFKCXJX55AVMflYnLFhANLv5MmNYCrq0Drg_pt-mlLzArRyh7IwSpc1WqQA4wwiorftY4Guxp8EKs6C0hiWx3jJi1MU4t3jxIzKzry_SQOaJz21VdofhWnUSy6NO80nLqaxCbYP62NEpJLvztUf5Ee6yOS_YDPYs8"/>
+</div>
+<div class="w-full md:w-1/2 space-y-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-body-lg">"The Breed Advisor was shockingly accurate. It recommended a Siberian for my allergies, and it's been the best decision for my home life."</p>
+<div>
+<p class="font-bold text-on-surface">James T.</p>
+<p class="text-label-md text-on-surface-variant">Matched via Care Portal</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-xxl rounded-[32px] ambient-shadow border border-surface-container-high flex flex-col md:flex-row gap-lg items-center">
+<div class="w-full md:w-1/2 aspect-square rounded-[24px] overflow-hidden">
+<img alt="Success Story 2" class="w-full h-full object-cover" data-alt="A high-quality lifestyle shot of a happy couple in a bright, sunlit kitchen, laughing while their fluffy white Persian cat explores the wooden floor. The decor is Scandinavian-minimalist with white cabinets and copper accents. The lighting is warm and natural, evoking a sense of pure joy, trust, and a premium family lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE8fPWcdvPZyVw3xx0aEkDWSPKsYetL3Ympn-Z5QcrpxP92ZIgHQqzZKtX9nfcD9KAERtinxOT6I4cGsXtuvzecdNmd71Ad8lFevwLMRWiJowDI0a-ZRpLsSJoJPCudTzvX2KchLEy8-zYw7rUGl2u5qpD7i1FL6M9grluUP80h1e5tL6rY8XAOo3d3W_eT7rTvohgThKlfKeVcwtYjXUYxm7GzVK2TTM0eZwLNH95usohvnaxA8K7A5CAhW_A3-p_G3PHISTgPVld"/>
+</div>
+<div class="w-full md:w-1/2 space-y-md">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-body-lg">"PurrfectMatch didn't just find us a cat; they provided a full white-glove service. The transition was so smooth and stress-free."</p>
+<div>
+<p class="font-bold text-on-surface">The Millers</p>
+<p class="text-label-md text-on-surface-variant">Adoption Excellence Award</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xxl px-margin-mobile">
+<div class="max-w-container-max mx-auto bg-primary text-on-primary rounded-[40px] p-xxl text-center relative overflow-hidden">
+<div class="z-10 relative space-y-lg">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg max-w-2xl mx-auto">Ready to meet your new family member?</h2>
+<p class="text-body-lg opacity-90 max-w-xl mx-auto">Join thousands of happy owners who found their companions through our expert matching service.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<button class="bg-white text-primary px-xxl py-md rounded-[16px] font-bold text-lg btn-press hover:bg-surface-container-lowest transition-all">Get Started Free</button>
+<button class="bg-transparent border-2 border-white/40 text-white px-xxl py-md rounded-[16px] font-bold text-lg btn-press hover:bg-white/10 transition-all">Talk to an Expert</button>
+</div>
+</div>
+<!-- Background texture/shade -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full -ml-24 -mb-24 blur-3xl"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-mobile max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-lowest mt-xxl border-t border-surface-container">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="pets">pets</span>
+<span class="font-display-lg text-primary text-headline-md">PurrfectMatch</span>
+</div>
+<p class="text-on-surface-variant font-label-md text-label-md">© 2024 PurrfectMatch Premium Concierge. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Contact Expert</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Breed Registry</a>
+</nav>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-surface shadow-[0px_-4px_20px_rgba(231,111,81,0.04)] rounded-t-[24px]">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-[16px] px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="pets">pets</span>
+<span class="font-label-sm text-label-sm">Advisor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm">Adopt</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm">Expert</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for smooth scrolling and header background shift
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+
+        // Simple button press animation logic is handled by CSS scale classes
+    </script>
+</body></html>

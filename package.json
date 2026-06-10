@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "npm run dev --prefix Backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   }
 }

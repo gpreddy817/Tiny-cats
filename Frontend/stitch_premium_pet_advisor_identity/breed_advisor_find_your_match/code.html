@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Breed Advisor | PurrfectMatch Premium Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fff8f6",
+                      "tertiary-container": "#779b7f",
+                      "on-secondary-fixed-variant": "#6f3800",
+                      "on-primary-container": "#590f00",
+                      "tertiary-fixed": "#c5eccc",
+                      "secondary-fixed-dim": "#ffb780",
+                      "on-primary-fixed": "#3c0700",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#3a2e2b",
+                      "on-tertiary-fixed-variant": "#2c4e36",
+                      "inverse-on-surface": "#ffede9",
+                      "on-tertiary-container": "#0f321d",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#241916",
+                      "surface-container": "#ffe9e4",
+                      "primary": "#a33d23",
+                      "primary-container": "#e76f51",
+                      "inverse-primary": "#ffb4a2",
+                      "surface-container-highest": "#f3ded9",
+                      "on-tertiary-fixed": "#00210e",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#f3ded9",
+                      "on-secondary-fixed": "#2f1400",
+                      "on-surface-variant": "#57423d",
+                      "tertiary": "#43664d",
+                      "tertiary-fixed-dim": "#aad0b1",
+                      "on-secondary-container": "#783d01",
+                      "on-primary-fixed-variant": "#83260e",
+                      "surface-container-high": "#f9e4df",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdad2",
+                      "surface-dim": "#ead6d1",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#fff8f6",
+                      "primary-fixed-dim": "#ffb4a2",
+                      "secondary-container": "#ffab69",
+                      "outline": "#8a716c",
+                      "surface-container-low": "#fff1ed",
+                      "secondary": "#8e4e14",
+                      "surface": "#fff8f6",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#dec0b9",
+                      "secondary-fixed": "#ffdcc4",
+                      "surface-tint": "#a33d23",
+                      "on-background": "#241916"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "md": "16px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "base": "4px",
+                      "xl": "32px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "gutter": "24px",
+                      "xxl": "48px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Sora"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Sora"],
+                      "label-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-lg-mobile": ["Sora"],
+                      "label-md": ["Inter"],
+                      "headline-lg": ["Sora"],
+                      "display-lg": ["Sora"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 shadow-sm">
+<div class="max-w-container-max mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-headline-md text-primary tracking-tight">PurrfectMatch</span>
+<div class="hidden md:flex gap-6">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Breed Advisor</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Adoptions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Care Portal</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant scale-75">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-md ml-2 w-48" placeholder="Search breeds..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-all duration-200">favorite</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-all duration-200">account_circle</button>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-[16px] font-label-md active:scale-95 transition-transform">Sign In</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-xxl px-margin-mobile md:px-0">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto md:px-6 mb-xxl">
+<div class="relative rounded-[32px] overflow-hidden bg-surface-container h-[400px] flex items-center p-xl">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A serene, high-end interior of a sun-drenched modern living room with soft beige walls and minimalist furniture. A majestic, long-haired cream-colored cat sits gracefully on a velvet armchair, looking towards a large window. The lighting is warm and ethereal, emphasizing a sense of luxury, peace, and domestic bliss. The overall aesthetic is clean, airy, and sophisticated, mirroring a premium concierge service experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzasVla10vrOzv9s8o0hOnUvAIkFG1xAJLO0nf2uyBAC0qG8UfbO4dyiPVMV2p-Ig0sM6Cp9uMb0x-AvmF1Ab_o1cyL0yJfCnimq6fT8cDsMIiTYMnSIulg4Rm-il7CaRy-QDg8iJ9qy58g1TF1BqFVeTtqEywmc2J6DSXek1Tu-xVyAnCCIzHjNgtvIuTmm86f28Gz-SLix4aOLX4NFCnmwhUcc8M4sSBHYGcQVzy6inKsqMtCJq-77f8iXwmRVz2rWzVSRt_OvXe"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container via-surface-container/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="bg-tertiary-container text-on-tertiary px-4 py-1 rounded-full text-label-sm font-label-sm inline-block mb-4">Concierge Assistant</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-md leading-tight">Find your lifetime companion with expert guidance.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-lg">Our AI-driven advisor translates your lifestyle into the perfect feline match, balancing temperament, care needs, and personality.</p>
+</div>
+</div>
+</section>
+<!-- Interactive Advisor Questionnaire -->
+<section class="max-w-container-max mx-auto md:px-6 mb-xxl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Filter Panel -->
+<aside class="lg:col-span-4 bg-white rounded-[24px] p-xl shadow-[0px_4px_20px_rgba(231,111,81,0.04)] h-fit sticky top-28">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-lg">Your Profile</h2>
+<div class="space-y-xl">
+<!-- Lifestyle -->
+<div>
+<label class="font-label-md text-label-md text-primary block mb-md">Lifestyle</label>
+<div class="grid grid-cols-1 gap-sm">
+<button class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface-container-low hover:border-primary transition-all group">
+<span class="font-body-md text-body-md text-on-surface">Quiet Apartment</span>
+<span class="material-symbols-outlined text-tertiary-container group-hover:scale-110 transition-transform">apartment</span>
+</button>
+<button class="flex items-center justify-between p-md rounded-xl border-2 border-primary bg-primary/5 transition-all">
+<span class="font-body-md text-body-md text-primary font-semibold">Active Household</span>
+<span class="material-symbols-outlined text-primary">house</span>
+</button>
+<button class="flex items-center justify-between p-md rounded-xl border border-outline-variant bg-surface-container-low hover:border-primary transition-all group">
+<span class="font-body-md text-body-md text-on-surface">Work-from-home</span>
+<span class="material-symbols-outlined text-tertiary-container group-hover:scale-110 transition-transform">laptop_mac</span>
+</button>
+</div>
+</div>
+<!-- Temperament -->
+<div>
+<label class="font-label-md text-label-md text-primary block mb-md">Temperament</label>
+<div class="flex flex-wrap gap-sm">
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-white text-on-surface-variant hover:bg-tertiary/10 hover:border-tertiary transition-all">Affectionate</button>
+<button class="px-4 py-2 rounded-full bg-tertiary text-on-tertiary font-semibold">Playful</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-white text-on-surface-variant hover:bg-tertiary/10 hover:border-tertiary transition-all">Independent</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-white text-on-surface-variant hover:bg-tertiary/10 hover:border-tertiary transition-all">Quiet</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant bg-white text-on-surface-variant hover:bg-tertiary/10 hover:border-tertiary transition-all">Vocal</button>
+</div>
+</div>
+<!-- Care Requirements -->
+<div>
+<label class="font-label-md text-label-md text-primary block mb-md">Care Intensity</label>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="40"/>
+<div class="flex justify-between mt-sm text-label-sm text-on-surface-variant">
+<span>Low Maintenance</span>
+<span>Premium Grooming</span>
+</div>
+</div>
+<button class="w-full py-md bg-secondary text-on-secondary rounded-[16px] font-headline-md flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+                            Refine Matches
+                            <span class="material-symbols-outlined">auto_awesome</span>
+</button>
+</div>
+</aside>
+<!-- Results Grid -->
+<div class="lg:col-span-8 space-y-lg">
+<div class="flex justify-between items-center mb-md">
+<p class="font-label-md text-label-md text-on-surface-variant">Showing <span class="text-primary font-bold">12 curated breeds</span> based on your preferences</p>
+<div class="flex items-center gap-2 text-label-md text-on-surface-variant">
+<span>Sort by:</span>
+<button class="flex items-center gap-1 font-semibold text-primary">Match Score <span class="material-symbols-outlined text-sm">expand_more</span></button>
+</div>
+</div>
+<!-- Breed Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Card 1 -->
+<div class="group bg-white rounded-[24px] overflow-hidden shadow-[0px_4px_20px_rgba(231,111,81,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A portrait of a stunning Ragdoll cat with bright blue eyes and silky white and grey fur. The cat is sitting elegantly on a light oak floor against a clean, minimal white background. The soft morning light highlights the delicate texture of its fur, creating a high-fashion pet photography feel that communicates serenity and premium care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg4HGjn72NgvxBbnZAexhmdX1N7ne4CwHE8gibpsrxGP6F5oCgry5In1FeDB53iFqQCwCEl2Mj8cyKc_VeaTrwgkYgRHi3LxxrEs1pNPYyXkCoNexypy0jp2wuMkp5qvQGGhW_YVXFano3NiHZC9G-0H5k7PZs9Q_3tLRDnWLpJayTmaYdFB1T8N3wPnACTb0J5O92a0HPDx9y6gkznCuaJQXv-OE068EI8OYC4gvU5EixlnlMgMkCrbKBC4SIVT4D-2hBytrZWtSO"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="text-tertiary-container font-bold text-label-md">98% Match</span>
+</div>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ragdoll</h3>
+<p class="text-label-sm text-on-surface-variant">Gentle Giant</p>
+</div>
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">favorite</button>
+</div>
+<div class="flex flex-wrap gap-2 mb-lg">
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Affectionate</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Docile</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Quiet</span>
+</div>
+<div class="pt-md border-t border-surface-container flex justify-between items-center">
+<span class="text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">content_cut</span> Grooming: High
+                                    </span>
+<button class="text-primary font-semibold text-label-md hover:underline">View Details</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white rounded-[24px] overflow-hidden shadow-[0px_4px_20px_rgba(231,111,81,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An energetic Abyssinian cat with a beautiful ruddy coat jumping playfully in a bright, modern studio environment. The composition captures the cat's lithe, muscular build and alert expression mid-motion. The background is a soft pastel peach, emphasizing the cat's vibrant warm tones. The lighting is sharp yet flattering, highlighting every detail of the cat's short, ticked coat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5lslqmjPGuS4OrbKK1lMuj6HN787XjtNrrI1TGgEszSrITKMfp6r_725KzmLuKxeJ_kdgnrqLj9z51uvPAE85N2VsqK3n3eiG_R6Kwru5gv90JOgpsTNZFPPGtQhWyqBDezkXs66_jbrm-yp67WToyg81vtIV8ShDKsLBLlLfC75CrvvYbpQsjeNB5NtIvBMY7rumgKfK755Ku7QVS0JwXzpzqmnWwEi3zPeEoBoex1GG6y41ocfAWbN-t6rWkMQnbgMGmpKvbepn"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="text-tertiary-container font-bold text-label-md">92% Match</span>
+</div>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Abyssinian</h3>
+<p class="text-label-sm text-on-surface-variant">The Athlete</p>
+</div>
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">favorite</button>
+</div>
+<div class="flex flex-wrap gap-2 mb-lg">
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Active</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Intelligent</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Social</span>
+</div>
+<div class="pt-md border-t border-surface-container flex justify-between items-center">
+<span class="text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">content_cut</span> Grooming: Low
+                                    </span>
+<button class="text-primary font-semibold text-label-md hover:underline">View Details</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white rounded-[24px] overflow-hidden shadow-[0px_4px_20px_rgba(231,111,81,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A charming British Shorthair cat with a plush, silver-blue coat sitting calmly on a designer marble countertop. The cat's round face and expressive copper eyes are the focal point. The kitchen setting is modern and high-end with soft, diffused sunlight. The image evokes a sense of sturdy reliability and understated elegance, perfect for a premium cat breed gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0A52aRbBm5jxADy1keEAT98FOSKjmSvXK9MeHi3lgn11egYA9e77nxP5E9vY5H654K0jpvLqpcix5PGhpzB1Lj8wwfJIua1c7sn1eUjhg7GQeTrQQGq1ROqaIJZp6Busr4JjUru00F8K8qFMbzqie5s50Lsxk-xl7RxXlo0tegMFRAGYX6tPiRmj1UvLDyiDW-nrAC20tB4GYJDheuwD3X_wLmVS8J6oscypMFFDP8vjWfYEpk6sABW1OzNxhZflxGy6TD2WdEGD"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="text-tertiary-container font-bold text-label-md">87% Match</span>
+</div>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">British Shorthair</h3>
+<p class="text-label-sm text-on-surface-variant">The Gentleman</p>
+</div>
+<button class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">favorite</button>
+</div>
+<div class="flex flex-wrap gap-2 mb-lg">
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Easygoing</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Loyal</span>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary text-label-sm rounded-full">Independent</span>
+</div>
+<div class="pt-md border-t border-surface-container flex justify-between items-center">
+<span class="text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">content_cut</span> Grooming: Moderate
+                                    </span>
+<button class="text-primary font-semibold text-label-md hover:underline">View Details</button>
+</div>
+</div>
+</div>
+<!-- Expert Consultation Card -->
+<div class="relative bg-primary rounded-[24px] p-xl flex flex-col justify-center items-center text-center text-on-primary">
+
+<span class="material-symbols-outlined text-[48px] mb-md" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-headline-md text-headline-md mb-md">Need Human Insight?</h3>
+<p class="font-body-md text-body-md mb-xl">Our expert breed specialists can help you navigate these results and find the one that truly fits your heart.</p>
+<button class="bg-white text-primary px-8 py-3 rounded-[16px] font-headline-md hover:bg-surface-container-low transition-colors z-10">Schedule Call</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-mobile max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-lowest mt-xxl">
+<div class="flex flex-col gap-2">
+<span class="font-display-lg text-primary text-headline-md">PurrfectMatch</span>
+<p class="text-on-surface-variant font-label-md">© 2024 PurrfectMatch Premium Concierge. All rights reserved.</p>
+</div>
+<div class="flex gap-lg flex-wrap justify-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Contact Expert</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Breed Registry</a>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-surface dark:bg-surface-container rounded-t-[24px] shadow-lg">
+<button class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-[16px] px-4 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="font-label-sm text-label-sm">Advisor</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm">Adopt</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-sm text-label-sm">Expert</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.95)';
+            });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Filter Toggle Mockup
+        const chips = document.querySelectorAll('.flex-wrap button');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('bg-tertiary');
+                chip.classList.toggle('text-on-tertiary');
+                chip.classList.toggle('font-semibold');
+                chip.classList.toggle('border-outline-variant');
+            });
+        });
+    </script>
+</body></html>

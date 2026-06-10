@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .tonal-shadow {
+            box-shadow: 0px 4px 20px rgba(231, 111, 81, 0.04);
+        }
+        body {
+            background-color: #FFFDF8;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fff8f6",
+                        "tertiary-container": "#779b7f",
+                        "on-secondary-fixed-variant": "#6f3800",
+                        "on-primary-container": "#590f00",
+                        "tertiary-fixed": "#c5eccc",
+                        "secondary-fixed-dim": "#ffb780",
+                        "on-primary-fixed": "#3c0700",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#3a2e2b",
+                        "on-tertiary-fixed-variant": "#2c4e36",
+                        "inverse-on-surface": "#ffede9",
+                        "on-tertiary-container": "#0f321d",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#241916",
+                        "surface-container": "#ffe9e4",
+                        "primary": "#a33d23",
+                        "primary-container": "#e76f51",
+                        "inverse-primary": "#ffb4a2",
+                        "surface-container-highest": "#f3ded9",
+                        "on-tertiary-fixed": "#00210e",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#f3ded9",
+                        "on-secondary-fixed": "#2f1400",
+                        "on-surface-variant": "#57423d",
+                        "tertiary": "#43664d",
+                        "tertiary-fixed-dim": "#aad0b1",
+                        "on-secondary-container": "#783d01",
+                        "on-primary-fixed-variant": "#83260e",
+                        "surface-container-high": "#f9e4df",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdad2",
+                        "surface-dim": "#ead6d1",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fff8f6",
+                        "primary-fixed-dim": "#ffb4a2",
+                        "secondary-container": "#ffab69",
+                        "outline": "#8a716c",
+                        "surface-container-low": "#fff1ed",
+                        "secondary": "#8e4e14",
+                        "surface": "#fff8f6",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "outline-variant": "#dec0b9",
+                        "secondary-fixed": "#ffdcc4",
+                        "surface-tint": "#a33d23",
+                        "on-background": "#241916",
+                        "warm-amber": "#F4A261"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "xxl": "24px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "4px",
+                        "xl": "32px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "xxl": "48px"
+                    },
+                    "fontFamily": {
+                        "display": ["Sora"],
+                        "body": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-container-max mx-auto bg-white/70 backdrop-blur-md border-b border-white/50 shadow-sm">
+<div class="flex items-center gap-xl">
+<h1 class="font-display text-headline-md text-primary tracking-tight">PurrfectMatch</h1>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-body-md" href="#">Breed Advisor</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-body-md" href="#">Adoptions</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-body text-body-md" href="#">Care Portal</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-all">favorite</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full transition-all">account_circle</button>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-xl font-body font-semibold active:scale-95 transition-transform">Sign In</button>
+</div>
+</header>
+<main class="pt-xxl mt-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-6 py-xxl">
+<div class="flex flex-col md:flex-row items-center gap-xxl">
+<div class="flex-1 space-y-md">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-sm font-semibold uppercase tracking-wider">Expert Insights</span>
+<h2 class="font-display text-display-lg text-on-surface leading-tight">Master the Art of <span class="text-primary">Feline Care.</span></h2>
+<p class="text-on-surface-variant font-body text-body-lg max-w-xl">A curated library of clinical expertise and behavioral science, designed to help you build a deeper, healthier bond with your cat.</p>
+<div class="flex items-center gap-md pt-md">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-background overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of a professional female veterinarian with a warm, empathetic expression. The lighting is soft and bright, set in a clean modern clinic with warm wood accents, reflecting a high-end corporate healthcare aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWimlcukLLT5PZNF_SLm6S_pmkj5NE9adgm1UfbyumqjDjjlk1SLr_zfGf4pO2UmomzA1soPjHTH4NrmTSXweLBCODfCIsuw15NWHUuy7LXKPzv-9JH4YxPu_02nf3TCNaRwuN79gSuBJEudR1I5PL0NFNSO8PDjCAkScablN00aJrIn5cpBV_z5_CsFuNrJpHlCTB76e0TMw6pEMOmCBcid5MquaDVbzgTEKZCejWbu0LBKAB_JuZryd_qr2w-qeslK9Rb90WAmwk"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-background overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A focused male animal nutritionist in a professional setting, looking at documents with a calm and confident demeanor. High-key natural lighting illuminates the scene, maintaining the sun-drenched and sophisticated brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEtqU0rs2O7DVH7mX_AVbmWrby8WeuUWZQeZNyRbhcCtrxoKkIi7zvkqr1DzoTjMWZCt_bFA4YbDTVzmK66JEvMewQqQYbg95HP69F09hV1wDqJtS6C5ijKcpEvQvQ3Os_II8SnwIIs_7D1y5mAB0FCC9tlli_hMBKvCz8xGJU8fHylNs7bbmqbnPZ396IU5xZnhKTJCJCnx4j_lwWUe76lh9WMF3cK_QN1Ab9q-ntQEx4S_2FR4hFSD7PT_o2BxjE7EKuEA2hDulR"/>
+</div>
+</div>
+<p class="text-on-surface-variant text-label-md">Reviewed by <span class="font-semibold text-on-surface">12+ Veterinary Experts</span></p>
+</div>
+</div>
+<div class="flex-1 w-full h-[500px] rounded-xxl overflow-hidden tonal-shadow relative group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A serene, high-resolution shot of a ginger cat sitting peacefully by a sunlit window in a minimalist, modern living room. The room features soft cream-colored walls, high-end textures, and warm natural lighting that creates a calm, trustworthy, and expert atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6XtyYAiaCxsd7FYwBqYoGe_1osin_CBjWsNd2tkJYf08Xj7RPp3FL5I5dppSFLj1JJDmMntVdg0XAX80bKkmV6TptcY6wLWz7nKJFOuuhLdQHlB5hwTzyK7SVtJ2fU2xYX0tlQY4t-ul3SFEDeAKWfuFd3FV-09saVQM2WR3S8U7st7L-mK2soeVYRhQ533xCcS2CkwgTu4_euEH1ImupbtYRZyDlvcCxtxSvKtDRJm6wBKcNiCAciR272KsdxV0q167ZUu9vEa9t"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+</div>
+</section>
+<!-- Category Grid / Featured Articles -->
+<section class="max-w-container-max mx-auto px-6 py-xxl bg-white/30 rounded-xxl">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h3 class="font-display text-headline-lg text-on-surface mb-2">Featured Guidance</h3>
+<p class="text-on-surface-variant font-body text-body-md">Essential reading for every dedicated cat owner.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                    View All Articles <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg h-auto">
+<!-- Large Feature Card: Cat Nutrition -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xxl bg-white tonal-shadow flex flex-col">
+<div class="h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A premium close-up of high-quality organic cat food being served in a ceramic designer bowl. The setting is a bright, sun-drenched modern kitchen with marble countertops. The mood is clean, clinical, and luxurious, focusing on feline health and nutrition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLx76lm1adskzOzdnZaYMIVEqQlHGU3pHrKXRXqERbwCSLCBR46DeGuQCPvtmAaRnonBzYBorRn6aVCelbA69fhZc6QKXqQVUkBkYnC-3ocL1UdWWZNy24VqO5a6ZJ142h1ThZuiwxd1bsqMHW9GyEaaQo5IQVvtuBnPyStNAxh58zpIpTuIu8bZPi3ulUC1V2uQzKTiCyjzINTj1zARzQrY3HBguUfm8oQatrQVvwu64EU5MH3G1fspsOX67N7OtjNAW3Nspsi6gO"/>
+</div>
+<div class="p-lg flex-1 flex flex-col justify-between">
+<div>
+<span class="inline-block px-3 py-1 rounded-full bg-[#F4A261]/10 text-[#F4A261] font-label-sm text-xs font-bold mb-md">CAT NUTRITION</span>
+<h4 class="font-display text-headline-lg text-on-surface mb-sm">The Science of Satiety: Optimal Diet Cycles</h4>
+<p class="text-on-surface-variant font-body text-body-md max-w-2xl">Understanding the biological needs of obligate carnivores and how to transition your pet to a high-moisture, premium protein diet for longevity.</p>
+</div>
+<div class="mt-xl flex items-center gap-md">
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">schedule</span> 12 min read
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-label-sm">
+<span class="material-symbols-outlined text-sm">visibility</span> 4.2k views
+                            </div>
+</div>
+</div>
+</div>
+<!-- Behavioral Tips -->
+<div class="group overflow-hidden rounded-xxl bg-white tonal-shadow flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A calm, elegant cat observing its surroundings in a minimalist home environment. The image is captured with soft focus and shallow depth of field, highlighting the cat's alert but peaceful behavior. Warm, golden hour light fills the frame, evoking a sense of expertise and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPtXrN0VslfNiRYFShjl2IMCXhimsDM6kvay5JvfOi1jo_c7zaeC5ILT0UqMf2c8dChCZaOU2ksCpzkv7Riqs8XaFfw2LtVyh4gSyaexUqGMiHE6fZjDpO9AN9Y-XRK7FvWdB9EmLjj_w6s90MDmWIW1Ds4_OlUhossyvYLN760bynO5bNRX3B0Zypyhcw2mJETs5tcGnVtIjbjA7uZiSTOCeXDAxyoGEcVzO9ZDi7zTgtlWF4r4AxSLNT1kCylaA4MjHlUONJABum"/>
+</div>
+<div class="p-lg">
+<span class="inline-block px-3 py-1 rounded-full bg-[#F4A261]/10 text-[#F4A261] font-label-sm text-xs font-bold mb-md">BEHAVIORAL TIPS</span>
+<h4 class="font-display text-headline-md text-on-surface mb-sm">Decoding the Slow Blink</h4>
+<p class="text-on-surface-variant font-body text-label-md line-clamp-3">Mastering the subtle language of feline trust and communication through non-verbal cues.</p>
+</div>
+</div>
+<!-- Home Prep -->
+<div class="group overflow-hidden rounded-xxl bg-white tonal-shadow flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern, aesthetically pleasing cat corner with a minimalist climbing wall and a high-end scratcher. The furniture is made of light wood and felt. The environment is spacious and clean, demonstrating a premium home preparation style that blends seamlessly with upscale interior design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA73YcA5aVcxnXniRhWypPBfxTAPG6HwpLVOt92fzESy_FHIuu_XL6fFipSUIt8zGkQv_GBQFiZdGlkVP0HSI_2JDIZw26hMVOPfxzqyBaJ44p_p1iE2mbtiL6V3oYNl9TqqehBI4NDcrS5WfGCkZKefxI0dOcBHseLflN9NmmIIyvJrngpqrIrkaRAAN24E67kNKUye0SbpDMeeZ1v8u6vr6Z5Kln3K_LmNChYd4S0THSfE2Wa2aTlhCQD9oMVJTiyHgBnmGY6W_mE"/>
+</div>
+<div class="p-lg">
+<span class="inline-block px-3 py-1 rounded-full bg-[#F4A261]/10 text-[#F4A261] font-label-sm text-xs font-bold mb-md">HOME PREP</span>
+<h4 class="font-display text-headline-md text-on-surface mb-sm">The Minimalist Cat Home</h4>
+<p class="text-on-surface-variant font-body text-label-md line-clamp-3">Designing a space that satisfies feline instincts without compromising your interior design aesthetic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Trust CTA -->
+<section class="max-w-container-max mx-auto px-6 py-xxl mb-xxl">
+<div class="bg-surface-container-high rounded-[32px] p-xl md:p-xxl flex flex-col md:flex-row items-center justify-between gap-xl">
+<div class="max-w-2xl">
+<h3 class="font-display text-headline-lg text-on-surface mb-4">Expert Advice, Delivered Weekly.</h3>
+<p class="text-on-surface-variant font-body text-body-lg">Join 25,000+ discerning cat owners who receive our monthly research summaries and expert-led care strategies.</p>
+</div>
+<div class="w-full md:w-auto flex flex-col sm:flex-row gap-md">
+<input class="bg-white border-none rounded-xl px-lg py-md w-full sm:w-80 focus:ring-2 focus:ring-primary-container text-on-surface placeholder:text-on-surface-variant/50" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-xl py-md rounded-xl font-body font-semibold active:scale-95 transition-transform whitespace-nowrap">Subscribe Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin-mobile max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-low border-t border-surface-variant/50">
+<div class="flex flex-col gap-sm items-center md:items-start">
+<div class="font-display text-primary text-headline-md">PurrfectMatch</div>
+<p class="font-body text-label-md text-on-surface-variant text-center md:text-left max-w-xs">The premium concierge for discerning feline lovers and expert care.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-label-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-label-md" href="#">Contact Expert</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body text-label-md" href="#">Breed Registry</a>
+</div>
+<div class="text-on-surface-variant font-body text-label-md">
+            © 2024 PurrfectMatch Premium Concierge. All rights reserved.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 md:hidden bg-surface shadow-[0px_-4px_20px_rgba(231,111,81,0.04)] rounded-t-[24px]">
+<div class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-xs font-semibold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined">pets</span>
+<span class="font-label-sm text-xs font-semibold">Advisor</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-all">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-xs font-semibold">Adopt</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-[16px] px-4 py-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-sm text-xs font-semibold">Expert</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.tonal-shadow').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'transform 0.4s cubic-bezier(0.2, 1, 0.3, 1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>
