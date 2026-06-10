@@ -1,35 +1,44 @@
 import mongoose from "mongoose";
-import ICat from "../types/cats.types.ts";
+import type { ICat } from "../types/cats.types.ts";
 
-let schema = new mongoose.Schema<ICat>({
-    name:{
-        type:String,
-        required:true
+let catSchema = new mongoose.Schema<ICat>(
+  {
+    name: {
+      type: String,
+      required: true,
     },
-    breed:{
-        type:String,
-        required:true
+    breed: {
+      type: String,
+      required: true,
     },
-    description:{
-        type:String,
-        required:true
+    description: {
+      type: String,
+      required: true,
     },
-    lifespan:{
-        type:Number,
-        default:1,
+    lifeSpan: {
+      type: Number,
+      default: 1,
     },
-    energylevel:{
-        type:String,
-        required:true
+    energyLevel: {
+      type: String,
+      required: true,
     },
-    kidsfriendly:{
-        type:Boolean,
-        required:true
+    kidsFriendly: {
+      type: Boolean,
+      default: true,
     },
-    appartmentfriendly:{
-        type:Boolean,
-        required:true
+    apartmentFriendly: {
+      type: Boolean,
+      default: true,
     },
-    
+    image: String,
+    color: String,
+  },
+  {
+    timestamps: true,
+  }
+);
 
-})
+let CatModel = mongoose.model("Cat", catSchema);
+
+export default CatModel;
