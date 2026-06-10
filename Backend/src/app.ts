@@ -1,10 +1,12 @@
 import express, { type Request, type Response } from "express";
+import cors from "cors";
 import catsRoute from "./routes/cat.routes.ts";
 import aiRoutes from "./routes/ai.routes.ts";
 import aiRecommendRoutes from "./routes/aiRecommend.routes.ts";
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
